@@ -1,0 +1,75 @@
+{
+	"version": "0",
+	"id": "36372324-4f8f-e984-da79-fdb1841e9592",
+	"detail-type": "AWS API Call via CloudTrail",
+	"source": "aws.config",
+	"account": "365610231659",
+	"time": "2019-03-08T19:48:23Z",
+	"region": "us-west-2",
+	"resources": [],
+	"detail": {
+		"eventVersion": "1.05",
+		"userIdentity": {
+			"type": "AssumedRole",
+			"principalId": "AROAIH5VU36QWOH653POS:EBS_UNUSED_AVAILABLE_VOLUMES",
+			"arn": "arn:aws:sts::365610231659:assumed-role/EBS_UNUSED_AVAILABLE_VOLUMES/EBS_UNUSED_AVAILABLE_VOLUMES",
+			"accountId": "365610231659",
+			"accessKeyId": "ASIAVKIARM5VVZ5QMPUK",
+			"sessionContext": {
+				"attributes": {
+					"mfaAuthenticated": "false",
+					"creationDate": "2019-03-08T19:48:19Z"
+				},
+				"sessionIssuer": {
+					"type": "Role",
+					"principalId": "AROAIH5VU36QWOH653POS",
+					"arn": "arn:aws:iam::365610231659:role/EBS_UNUSED_AVAILABLE_VOLUMES",
+					"accountId": "365610231659",
+					"userName": "EBS_UNUSED_AVAILABLE_VOLUMES"
+				}
+			}
+		},
+		"eventTime": "2019-03-08T19:48:23Z",
+		"eventSource": "config.amazonaws.com",
+		"eventName": "PutEvaluations",
+		"awsRegion": "us-west-2",
+		"sourceIPAddress": "35.167.53.244",
+		"userAgent": "Boto3 / 1.7 .74 Python / 3.6 .8 Linux / 4.14 .88 - 90.76.amzn2.x86_64 exec - env / AWS_Lambda_python3 .6 Botocore / 1.10 .74 ",
+		"requestParameters": {
+			"resultToken": "eyJlbmNyeXB0ZWREYXRhIjpbLTExNCwtOTYsLTIwLDE3LDMzLDM3LDQsODIsNTMsLTEyMywtOTUsLTQ4LC0zMSwtMTAzLDc0LC00LDI3LC02MiwxMDQsNDAsLTQxLDEyMiw0NCwtOTEsLTExNCw4MiwtMTE3LC04NywtNzgsMjQsNDcsNjksOTEsMCwtNDIsNzgsNjUsLTkzLDE2LC0xMCwtNTUsLTY0LDc0LC0xMDcsNCwtMTA2LDExMCwtNTAsNjgsMzYsMTA2LC02OCwtODIsOCwtNzcsMTE3LC0yLC0xMywyNyw4NCwtNCw4OCwzMyw1OSwwLC0xNCwtMTE4LC0yMywxMDMsLTYsLTExNiw3LC0xMTksLTQ0LDQ1LC03MywxMTMsMTA5LDEyNSwtMTcsNzksMjgsLTIwLC0xMTMsLTY5LC04OCw5Myw0MSw1NCwtMTAxLC00MywtMTEsNzgsLTc4LDUyLDExMSw3NSwyNCwxMTgsOSwtOCw0NywtODksOTAsLTExOCw5NywxMDEsLTM2LC03NSwyNywtODIsLTQxLC00NCwtNjksMTEyLDk4LDU2LDQ4LDI3LC01MiwtNjYsLTgsLTk1LDc4LDkwLDc2LC03OCwtNzYsOTUsNTUsLTUwLDQ0LDQ4LDgzLDExMyw1NCw4NiwxMCwtMTI0LDEyMiw3MCwtMTIyLDMxLC0zNSwtMTA3LC0xMjYsNCwtNTgsLTk2LC04MSwtMzEsLTMsLTExMywzOCw5NSwtMjUsNTEsLTEyMSwtMTgsLTYxLDMxLDk1LC0yNCwzLC0xMjAsMjYsLTgyLC0zOSwxMTAsMTAsMTksLTExNiwtODMsLTYsMSwtNjAsMTI0LDExOCwtNTAsMTAwLC00OSwtMTE4LC03Myw5Myw1MywtNjIsLTg1LDUyLC00OCwxLC0zOCwtMTAyLDcxLC0xMjEsLTk1LC0xMjcsNDUsMjQsLTI2LC0yNywtMzYsMTksLTE1LC01NCwtNjMsLTExMiwtMTE1LC0xMjAsLTQ2LDEwOSwtNzcsLTIwLC0xMDYsMTI3LDg0LDcwLDg5LDExOCwtMyw1OSwtODYsLTYwLDEyNSwxOSwtMywtMTIzLC05Miw0OCwtMTMsLTc1LC0xMDIsMTcsODYsLTkzLC04NCw4NywxMDAsMjYsLTEyNiwtNTIsLTQxLDg4LDEyNiwyNCwxMSwzMSwtNDIsODIsLTg2LC04OCwxMjUsLTk3LC0xNSwxMiwtNSwtNjgsOTksMTIwLC04OSwtNjgsLTEwNyw0OSw4Myw1Nyw1NiwwLC04NCwtMTIwLDEsNDIsNjUsLTQ2LC05MCwtMTE3LDkzLC03NSw0LDM1LC0xMjYsLTEsLTIxLC02NSw2OCwxMTEsNzksMTksLTczLC0yNCwtNzIsMTE2LDE5LDE5LC0zOSwxMDgsMTA4LDE5LDEyMCw2NywtMTcsOTAsMTE3LDM5LDcyLDEwOSwxNywzNiwtNCwzOCwtMzQsNjksNjMsODYsMTMsLTEsLTEyOCwtMTYsMTAxLC00NiwtODAsMzEsLTU3LDM2LC0yNSwtMTA5LDEsMTI2LC01MSwxMTksMzMsNTksLTQ2LC0zNCwtMTEsNjNdLCJtYXRlcmlhbFNldFNlcmlhbE51bWJlciI6MSwiaXZQYXJhbWV0ZXJTcGVjIjp7Iml2IjpbODcsNTEsMTA1LDkyLC02OSwtMjYsLTkwLDg5LDcxLDUsLTcxLDYzLC00LC00MywtOTgsMTExXX19 ",
+			"testMode ": false,
+			"evaluations": [{
+					"annotation": "EBS volume unused in greater than 30 days.",
+					"orderingTimestamp": "Mar 8,2019 7: 48: 01 PM ",
+					"complianceResourceType": "AWS:: EC2:: Volume ",
+					"complianceResourceId": "vol - 0 c25d1e7c31df9e80",
+					"complianceType": "NON_COMPLIANT "
+				},
+				{
+					"annotation": "EBS volume unused in greater than 30 days.",
+					"orderingTimestamp": "Mar 8,2019 7: 48: 01 PM ",
+					"complianceResourceType": "AWS:: EC2:: Volume ",
+					"complianceResourceId": "vol - 058 a9a6eab01f3bb6 ",
+					"complianceType": "NON_COMPLIANT "
+				},
+				{
+					"annotation": "EBS volume unused in greater than 30 days.",
+					"orderingTimestamp": "Mar 8,2019 7: 48: 01 PM ",
+					"complianceResourceType": "AWS:: EC2:: Volume ",
+					"complianceResourceId": "vol - 0b 59034 ca0e018bcd ",
+					"complianceType": "NON_COMPLIANT "
+				}
+			]
+		},
+		"responseElements": null,
+		"additionalEventData": {
+			"configRuleName": "EBS_VOL_FINDER_TEST",
+			"configRuleArn": "arn:aws:config:us-west-2:365610231659:config-rule/config-rule-vqhu1r",
+			"notificationJobType": "SCHEDULED_NOTIFICATION",
+			"configRuleInputParameters": "{\"MAX_AGE\":\"30\"}"
+		},
+		"requestID": "21a5fc0b-41db-11e9-9ea3-d3f1218c0062",
+		"eventID": "e786bd5f-e230-4132-b4ef-3c00a02e6a3e",
+		"eventType": "AwsApiCall"
+	}
+}

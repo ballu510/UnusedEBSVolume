@@ -23,7 +23,7 @@ from botocore.exceptions import ClientError
 # get AWS account id to concatenate with the DDB table name
 def get_account_id():
     sts = boto3.client('sts')
-    identity=sts.get_caller_identity()
+    identity=sts.get_caller_identity()  
     accountId = identity['Account']
     print('Default Credential Provider Chain Identity: ' + identity['Arn'])
     print("accountid "+accountId)
@@ -53,10 +53,6 @@ def lambda_handler(event,context):
                     {
                         'AttributeName': 'volume_id',
                         'KeyType': 'HASH'  #Partition key
-                    },
-                    {
-                        'AttributeName': 'timestamp',
-                        'KeyType': 'RANGE'  #Sort key
                     }
                 ],
                 AttributeDefinitions=[
@@ -64,11 +60,7 @@ def lambda_handler(event,context):
                         'AttributeName': 'volume_id',
                         'AttributeType': 'S'
                     },
-                    {
-                        'AttributeName': 'timestamp',
-                        'AttributeType': 'S'
-                    },
-    
+                        
                 ],
                 ProvisionedThroughput={
                     'ReadCapacityUnits': 10,
@@ -87,7 +79,6 @@ def lambda_handler(event,context):
             t = 10
             time.sleep(t) 
     except ClientError:
-        is_table_existing = False
         print("Table %s is in status of creating " % table.name)
             
     volumes = event['detail']['requestParameters']['evaluations']

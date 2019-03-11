@@ -26,7 +26,7 @@ def get_account_id():
     return accountId
 print('accountId is ' +get_account_id())
 dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
-tableName = 'Volumes5'+ '-' +get_account_id()
+tableName = 'Volumes10'+ '-' +get_account_id()
 table = dynamodb.Table(tableName)
 print(type(table))
 print("not intry " + str(table))
@@ -45,10 +45,6 @@ except ClientError as ce:
                 {
                     'AttributeName': 'volume_id',
                     'KeyType': 'HASH'  #Partition key
-                },
-                {
-                    'AttributeName': 'timestamp',
-                    'KeyType': 'RANGE'  #Sort key
                 }
             ],
             AttributeDefinitions=[
@@ -56,11 +52,6 @@ except ClientError as ce:
                     'AttributeName': 'volume_id',
                     'AttributeType': 'S'
                 },
-                {
-                    'AttributeName': 'timestamp',
-                    'AttributeType': 'S'
-                },
-
             ],
             ProvisionedThroughput={
                 'ReadCapacityUnits': 10,
@@ -79,7 +70,6 @@ try:
         t = 10
         time.sleep(t) 
 except ClientError:
-    is_table_existing = False
     print("Table %s is in status of creating " % table.name)
 with open("email.json") as json_file:
     volumes = json.load(json_file)
